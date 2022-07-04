@@ -36,5 +36,7 @@ out/
 ### VS Code ###
 .vscode/
 
-/logs/.
+logs/
 /src/main/resources/application.yml
+/src/main/resources/application-postgres.yml
+/src/main/resources/xml/

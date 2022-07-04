@@ -19,10 +19,18 @@ configurations {
 }
 
 dependencies {
+	runtimeOnly 'com.h2database:h2'
+
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.projectlombok:lombok:1.18.20'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	//jdbc
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+
 
 	// annotation
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
@@ -36,6 +44,11 @@ dependencies {
 	implementation group: 'org.apache.logging.log4j', name: 'log4j-web', version: '2.17.1'
 
 	implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.10.3'
+
+	//postgresql JDBC, Log4jdbc-og4je
+	implementation group: 'org.postgresql', name: 'postgresql', version: '42.3.3'
+	implementation group: 'org.bgee.log4jdbc-log4j2', name: 'log4jdbc-log4j2-jdbc4.1', version: '1.16'
+
 }
 
 test {
