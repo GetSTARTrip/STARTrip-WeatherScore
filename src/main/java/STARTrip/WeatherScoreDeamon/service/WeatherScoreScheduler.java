@@ -9,11 +9,11 @@ import org.springframework.stereotype.Component;
 public class WeatherScoreScheduler {
 
     @Autowired
-    private WeatherScoreService weatherScoreService;
+    private WeatherScoreByTownService weatherScoreByTownService;
 
-    @Scheduled(fixedRate = 500000) //500초 간격 설정
+    @Scheduled(fixedRate = 10800000) // 1h = 3600000ms 간격 설정
     public void weatherScoreScheduler(){
-        weatherScoreService.setWeatherPlace();
+        weatherScoreByTownService.setWeatherscoreByTown();
     }
 }
 

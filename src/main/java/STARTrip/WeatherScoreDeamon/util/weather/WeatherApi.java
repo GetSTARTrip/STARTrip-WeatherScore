@@ -61,7 +61,6 @@ public class WeatherApi  {
 
         // 추출
         LinkedHashMap responseResult = (LinkedHashMap) ((LinkedHashMap) response.getBody().get("response")).get("body");
-        log.info(responseResult.toString());
 
         LinkedHashMap bodyResult = (LinkedHashMap) responseResult.get("items");
         ArrayList<LinkedHashMap> items = (ArrayList<LinkedHashMap>) bodyResult.get("item");
